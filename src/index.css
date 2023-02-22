@@ -1,0 +1,268 @@
+.nav-items > ul {
+  display: flex;
+  justify-content: space-around;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.nav-items > ul > li {
+  padding: 15px;
+}
+.logo {
+  width: 50px;
+}
+.card-image {
+  width: 100%;
+}
+.card {
+  border: 5px solid black;
+  width: 250px;
+  padding: 10px;
+  margin: 10px;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  background-color: #e1f5fe;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+}
+
+.nav-items {
+  display: flex;
+  align-items: center;
+}
+
+.nav-items ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-items li {
+  margin: 0 10px;
+}
+
+.nav-items li a {
+  color: #333333;
+  text-decoration: none;
+  padding: 10px;
+  position: relative;
+  display: inline-block;
+}
+
+.nav-items li a::before,
+.nav-items li a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #ff5722;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-items li a::before {
+  top: 0;
+  left: 0;
+  transform-origin: left;
+}
+
+.nav-items li a::after {
+  bottom: 0;
+  right: 0;
+  transform-origin: right;
+}
+
+.nav-items li a:hover::before,
+.nav-items li a:hover::after {
+  transform: scaleX(1);
+}
+
+.nav-items li a:hover {
+  color: #ff5722;
+}
+
+.menu-icon {
+  display: none;
+}
+
+/* Media query for mobile */
+@media only screen and (max-width: 768px) {
+  .nav-items {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 1;
+  }
+
+  .nav-items ul {
+    flex-direction: column;
+  }
+
+  .nav-items li {
+    margin: 10px 0;
+  }
+
+  .nav-items li a {
+    display: block;
+    padding: 10px;
+  }
+
+  .menu-icon {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333333;
+  }
+
+  .menu-icon:hover {
+    color: #ff5722;
+  }
+
+  .menu-icon::before {
+    content: "\f0c9";
+    font-family: "FontAwesome";
+    font-weight: 600;
+    margin-right: 5px;
+  }
+}
+.card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  margin: 20px;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  border-width: 4px;
+  overflow: hidden;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-details {
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: center;
+  color: #333;
+}
+
+.card-cuisine {
+  font-size: 1rem;
+  margin-bottom: 4px;
+  text-align: center;
+  color: #555;
+}
+
+.card-rating {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #ff7f50;
+}
+
+.card:hover .card-image {
+  transform: scale(1.2);
+}
+
+.card-title::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 50%;
+  margin: 4px auto;
+  background-color: #333;
+}
+
+.card-cuisine::before {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 50%;
+  margin: 1px auto;
+  background-color: #555;
+  transform: scaleX(0);
+  transition: transform 0.2s ease-in-out;
+}
+
+.card-cuisine:hover::before {
+  transform: scaleX(1);
+}
+
+.card-rating::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 50%;
+  margin: 10px auto;
+  background-color: #ff7f50;
+  transform: scaleX(0);
+  transition: transform 0.2s ease-in-out;
+}
+
+.card-rating:hover::after {
+  transform: scaleX(1);
+}
+.searchContainer {
+  padding: 10px;
+  text-align: center;
+}
+input,
+.searchButton {
+  padding: 10px;
+}
+input {
+  width: 200px;
+}
+
+.shimmer-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 40px;
+}
+.shimmer-card {
+  position: relative;
+  width: 300px;
+  height: 350px;
+  margin: 30px;
+  background-color: #a4a3a3;
+}
+.container {
+  margin-left: 15px;
+}
+.Menu {
+  display: flex;
+}
