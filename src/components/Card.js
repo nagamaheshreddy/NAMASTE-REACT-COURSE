@@ -1,4 +1,4 @@
-import { imageCdnUrl } from "../constants";
+import { imageCdnUrl } from "../Utils/constants";
 
 const RestaurantCard = ({ name, cloudinaryImageId, cuisines, avgRating }) => {
   return (
