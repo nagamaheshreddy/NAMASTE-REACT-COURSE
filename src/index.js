@@ -10,6 +10,7 @@ import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Body from "./components/Body";
 import RestaurantMenu from "./components/Restaurant";
+import ShimmerUI from "./components/ShimmerUI";
 
 const appRouter = createBrowserRouter([
   {
