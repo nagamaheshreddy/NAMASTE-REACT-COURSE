@@ -32,8 +32,8 @@ const RestaurantMenu = () => {
         <h3>{restaurantMenu.name}</h3>
         <img src={imageCdnUrl + restaurantMenu.cloudinaryImageId}></img>
         <h4>{restaurantMenu.area}</h4>
-        <h4>{restaurantMenu.name}</h4>
         <h4>{restaurantMenu.avgRating}</h4>
+        <h4>{restaurantMenu.name}</h4>
       </div>
       <div>
         {Object.values(restaurantMenu?.menu?.items).map((item) => {
