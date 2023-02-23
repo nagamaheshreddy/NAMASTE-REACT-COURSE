@@ -1,16 +1,17 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import About from "./components/About";
 import Contact from "./components/Contact";
-import Cart from "./components/Cart";
 import Error from "./components/Error";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Body from "./components/Body";
 import RestaurantMenu from "./components/Restaurant";
 import ShimmerUI from "./components/ShimmerUI";
+
+const Cart = lazy(() => import("./components/Cart"));
 
 const appRouter = createBrowserRouter([
   {
@@ -32,7 +33,11 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/cart",
-        element: <Cart />,
+        element: (
+          <Suspense>
+            <Cart />
+          </Suspense>
+        ),
       },
       {
         path: "/restaurant/:id",
