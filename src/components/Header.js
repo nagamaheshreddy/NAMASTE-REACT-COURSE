@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 function Header() {
   const [loggedIn, setLoggedIn] = useState(false);
   const cartItems = useSelector((store) => store.cart.items);
+  console.log(cartItems);
 
   return (
     <div className="header" style={{ backgroundColor: "lightskyblue" }}>

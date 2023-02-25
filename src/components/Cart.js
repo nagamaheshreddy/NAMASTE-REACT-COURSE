@@ -2,17 +2,23 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { imageCdnUrl } from "../Utils/constants";
 import { useState } from "react";
+import store from "../Utils/store";
+import { useDispatch } from "react-redux";
+import { removeItem } from "../Utils/cartSlice";
 
 const Cart = () => {
   const cartItems = useSelector((store) => store.cart.items);
   const [filteredCartItems, setFilteredCartItems] = useState(cartItems);
   console.log(cartItems);
 
+  const dispatcher = useDispatch();
+
   const onRemoveHandler = (removedItem) => {
     const data = filteredCartItems.filter((item) => {
       return item != removedItem;
     });
     setFilteredCartItems(data);
+    dispatcher(removeItem(removedItem));
   };
 
   if (cartItems.length == 0) {
