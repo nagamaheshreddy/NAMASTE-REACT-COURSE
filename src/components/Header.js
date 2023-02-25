@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 function Header() {
   const [loggedIn, setLoggedIn] = useState(false);
+  const cartItems = useSelector((store) => store.cart.items);
 
   return (
     <div className="header" style={{ backgroundColor: "lightskyblue" }}>
@@ -23,7 +25,7 @@ function Header() {
             <Link to="/contact">CONTACT</Link>
           </li>
           <li>
-            <Link to="/cart">CART</Link>
+            <Link to="/cart">CART : {cartItems.length}</Link>
           </li>
         </ul>
         {loggedIn ? (

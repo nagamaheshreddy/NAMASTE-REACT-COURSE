@@ -265,4 +265,27 @@ input {
 }
 .Menu {
   display: flex;
+  flex-wrap: wrap;
+}
+.add-to-cart {
+  background-color: green;
+  border-radius: 5px;
+  padding: 3px;
+}
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20px;
+  padding: 20px;
+  width: 100%;
+  border: #333;
+  background-color: lightgray;
+  margin-bottom: 5px;
+}
+.remove-from-cart {
+  background-color: red;
+  border-radius: 5px;
+  padding: 10px;
+  align-content: center;
+  margin-left: 80px;
 }
