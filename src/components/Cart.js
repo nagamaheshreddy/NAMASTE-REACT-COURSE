@@ -8,16 +8,10 @@ import { removeItem } from "../Utils/cartSlice";
 
 const Cart = () => {
   const cartItems = useSelector((store) => store.cart.items);
-  const [filteredCartItems, setFilteredCartItems] = useState(cartItems);
-  console.log(cartItems);
 
   const dispatcher = useDispatch();
 
   const onRemoveHandler = (removedItem) => {
-    const data = filteredCartItems.filter((item) => {
-      return item != removedItem;
-    });
-    setFilteredCartItems(data);
     dispatcher(removeItem(removedItem));
   };
 
@@ -26,7 +20,7 @@ const Cart = () => {
   } else {
     return (
       <div className="Menu">
-        {filteredCartItems.map((item) => {
+        {cartItems.map((item) => {
           return (
             <div className="card">
               <img
